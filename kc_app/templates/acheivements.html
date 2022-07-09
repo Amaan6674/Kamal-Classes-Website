@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Achievements{% endblock %}
+{% block content %}
+<section class="text-gray-600 body-font sm:text-left">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Recent Success Stories</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Things work out best for those who make the best of how things work out.</p>
+    </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-row-padding w3-center">
+  <div class="w3-container w3-half">
+    <img src="{% static 'images/a1.jpeg' %}" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity w3-border w3-border-black">
+  </div>
+
+  <div class="w3-container w3-half">
+    <img src="{% static 'images/a2.jpeg' %}"  style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity w3-border w3-border-black">
+  </div>
+
+</div>
+<br>
+<div class="w3-row-padding">
+    <div class="w3-container w3-half">
+    <img src="{% static 'images/a3.jpeg' %}"  style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity w3-border w3-border-black">
+  </div>
+    <div class="w3-container w3-half">
+    <img src="{% static 'images/a4.jpeg' %}"  style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity w3-border w3-border-black">
+  </div>
+</div>
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:90%">
+  </div>
+</div>
+</section>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+{% endblock %}

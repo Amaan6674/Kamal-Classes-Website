@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Syllabus{% endblock %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<section class="text-gray-600 body-font sm:text-left">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Courses offered by Kamal Sir</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Live Online Traning + 3 months Internship Project + Certification</p>
+    </div>
+    <div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Java Full Stack Developement</h4>
+<img src="{% static 'images/jfs-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Python Full Stack Development</h4>
+<img src="{% static 'images/pfs-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Core Java + OCJA</h4>
+<img src="{% static 'images/cj-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Advanced Java + OCJP</h4>
+<img src="{% static 'images/aj-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Andriod</h4>
+<img src="{% static 'images/and-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>MySql Database </h4>
+<img src="{% static 'images/mysql-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-2 w3-indigo">
+<h4> Complete Python</h4>
+<img src="{% static 'images/py-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Django</h4>
+<img src="{% static 'images/dj-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>Machine Learning + Flask</h4>
+<img src="{% static 'images/ml-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+<h4>GoLang + SQLite</h4>
+<img src="{% static 'images/go-s.jpeg' %}" onclick="onClick(this)" style="width:100%;height:600;cursor:pointer">
+<div class="w3-container">
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="w3-row-padding">
+<div class="w3-half">
+<div class="w3-card-4 w3-indigo">
+</div>
+</div>
+</div>
+</div>
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:90%">
+  </div>
+</div>
+</section>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+{% endblock %}
